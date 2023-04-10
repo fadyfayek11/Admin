@@ -216,4 +216,10 @@ switchMode.addEventListener('change', function () {
        className: 'align-middle'
      }]
   });
+
+  $('.has-submenu > a').click(function(e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('active');
+    $(this).siblings('.submenu').slideToggle();
+  });
 }); // closing parenthesis for document ready function

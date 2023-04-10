@@ -13,7 +13,13 @@ a {
 li {
 	list-style: none;
 }
-
+.submenu {
+	display: none;
+  }
+  
+  .has-submenu.active > .submenu {
+	display: block;
+  }
 :root {
 	--poppins: 'Poppins', sans-serif;
 	--lato: 'Lato', sans-serif;
