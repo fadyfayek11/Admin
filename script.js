@@ -216,10 +216,16 @@ switchMode.addEventListener('change', function () {
        className: 'align-middle'
      }]
   });
+  var sectionBtns = document.getElementsByClassName("sidenav-section-btn");
 
-  $('.has-submenu > a').click(function(e) {
-    e.preventDefault();
-    $(this).parent().toggleClass('active');
-    $(this).siblings('.submenu').slideToggle();
-  });
+  for (var i = 0; i < sectionBtns.length; i++) {
+    sectionBtns[i].addEventListener("click", function() {
+      var items = this.nextElementSibling;
+      if (items.style.display === "block") {
+        items.style.display = "none";
+      } else {
+        items.style.display = "block";
+      }
+    });
+  }
 }); // closing parenthesis for document ready function
